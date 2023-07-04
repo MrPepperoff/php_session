@@ -1,6 +1,8 @@
 <?php
 session_start();
+require_once("lib/function.php");
 require_once("config.php");
+require_once("lib/db.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,21 +16,25 @@ require_once("config.php");
 <body>
 	<header>
 		<div class="container">
-			<div class="row">
-				<div class="col">
+			<div class="row justify-content-between">
+				<div class="col-4">
 					<h1>Сессия</h1>
 				</div>
-			</div>
-	</header>
-	<div class="container">
-		<div class="row">
-			<div class="col">
+				<div class ='col-4'>
 				<?php
-				include_once('login/form.php')
-				?>		
-			</div>
-		</div>
-	</div>
+				if(isset($_SESSION['login'])){
+					$link = connect();
+						$user = searchUserEmail($link, $_SESSION['login']);
+						if(!is_null($user)){
+							echo '<p>Вы вошли как: <span>'.$user['login'].'</span> <a href="login/logout.php" class="close">X</a></p>';
+							include_once("page.php");
+						}
+				}
+				else{
+						include_once("login/form.php");
+
+					}			
+				?>
 	
 	
 	<script src="js/bootstrap.min.js"></script>

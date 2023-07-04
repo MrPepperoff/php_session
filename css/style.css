@@ -13,15 +13,43 @@ header{
 	color: var(--c-green5);
 	text-align: center;
 }
-a{
+.close{
+	position: relative;
+	top: 2px;
 	display: inline-block;
 	text-decoration: none;
+	width: 30px;
+	height: 30px;
+	font-size: 20px;
+	line-height: 1.5;
 	color: #fff;
 	background: #c00;
-	padding:10px;
+/*	padding:10px;*/
+	border-radius: 50%;
 }
-a:hover{
-	background: #0c0;
+.close:hover{
+	background: #400;
+}
+span{
+	font-weight: bold;
+}
+p{
+	margin-top: -15px;
+	position: relative;
+	top: 50%;
+}
+img{
+	width: 100%;
+	height: auto;
+}
+main{
+	display: flex;
+}
+.shop{
+/*	width: 80%;*/
+}
+.basket{
+/*	width: 20%;*/
 }
 
 .btn-primary {

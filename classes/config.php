@@ -1,5 +1,5 @@
 <?php 
-	define("BASE_URL", "/php_session/classes/");
+	define("BASE_URL", "/classes/");
 
 	define("HOST", "localhost");
 	define("USER", "root");
