@@ -53,13 +53,14 @@ function searchUserEmail($link, $email){
 	return $desiredUser;
 }
 
-function searchProd($link, $id){
+function searchProd($link){
 	$sql = "SELECT 
 			id,
 			name,
+			img,
 			title,
 			price
-			FROM prod ";
+			FROM prod";
 
 	$result = mysqli_query($link, $sql);
 
@@ -68,6 +69,7 @@ function searchProd($link, $id){
 	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 		$items[] = $row;
 	}
+	return $items;
 	foreach ($items as $item) {
 		echo "<pre>";
 		print_r($item);

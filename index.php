@@ -20,7 +20,7 @@ require_once("lib/db.php");
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>SESSION</title>
-	<link rel="icon" href="images/favicon.ico">
+	<link rel="icon" href="images/product/favicon.ico">
 </head>
 <body class="index">
 	<header>
@@ -64,13 +64,38 @@ require_once("lib/db.php");
 			<div class="col-8">
 				<section class="container shop">
 					<div class="row">
+						
+						<div class="col-4">
+							<div class="card">
+							<!-- Верхняя часть -->
+							<div class="card__top">
+								<!-- Изображение-ссылка товара -->
+								<a href="#" class="card__image">
+									<img src="images/product/1.jpg" alt="1">
+								</a>
+							</div>
+							<!-- Нижняя часть -->
+							<div class="card__bottom">
+								<!-- Цены на товар -->
+								<div class="card__prices">
+									<div class="price">4 200 &#8381;</div>
+								</div>
+								<!-- Ссылка-название товара -->
+								<a href="#" class="card__title">
+								Нож Mora Kansbol сталь Sandvik 12C27 рукоять резинопластик (12634)
+								</a>
+								<!-- Кнопка добавить в корзину -->
+								<button class="card__add">В корзину</button>
+							</div>
+							</div>
+						</div>
 						<div class="col-4">
 							<div class="card">
 								<!-- Верхняя часть -->
 								<div class="card__top">
 									<!-- Изображение-ссылка товара -->
 									<a href="#" class="card__image">
-										<img src="images/1.jpg" alt="1">
+										<img src="images/product/2.jpg" alt="1">
 									</a>
 								</div>
 								<!-- Нижняя часть -->
@@ -94,31 +119,7 @@ require_once("lib/db.php");
 								<div class="card__top">
 									<!-- Изображение-ссылка товара -->
 									<a href="#" class="card__image">
-										<img src="images/2.jpg" alt="1">
-									</a>
-								</div>
-								<!-- Нижняя часть -->
-								<div class="card__bottom">
-									<!-- Цены на товар -->
-									<div class="card__prices">
-										<div class="price">4 200 &#8381;</div>
-									</div>
-									<!-- Ссылка-название товара -->
-									<a href="#" class="card__title">
-									Нож Mora Kansbol сталь Sandvik 12C27 рукоять резинопластик (12634)
-									</a>
-									<!-- Кнопка добавить в корзину -->
-									<button class="card__add">В корзину</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-4">
-							<div class="card">
-								<!-- Верхняя часть -->
-								<div class="card__top">
-									<!-- Изображение-ссылка товара -->
-									<a href="#" class="card__image">
-										<img src="images/3.jpg" alt="1">
+										<img src="images/product/3.jpg" alt="1">
 									</a>
 								</div>
 								<!-- Нижняя часть -->
@@ -142,7 +143,7 @@ require_once("lib/db.php");
 								<div class="card__top">
 									<!-- Изображение-ссылка товара -->
 									<a href="#" class="card__image">
-										<img src="images/4.jpg" alt="1">
+										<img src="images/product/4.jpg" alt="1">
 									</a>
 								</div>
 								<!-- Нижняя часть -->
@@ -166,7 +167,7 @@ require_once("lib/db.php");
 								<div class="card__top">
 									<!-- Изображение-ссылка товара -->
 									<a href="#" class="card__image">
-										<img src="images/1.jpg" alt="1">
+										<img src="images/product/1.jpg" alt="1">
 									</a>
 								</div>
 								<!-- Нижняя часть -->
@@ -190,7 +191,7 @@ require_once("lib/db.php");
 								<div class="card__top">
 									<!-- Изображение-ссылка товара -->
 									<a href="#" class="card__image">
-										<img src="images/2.jpg" alt="1">
+										<img src="images/product/2.jpg" alt="1">
 									</a>
 								</div>
 								<!-- Нижняя часть -->
@@ -214,7 +215,7 @@ require_once("lib/db.php");
 								<div class="card__top">
 									<!-- Изображение-ссылка товара -->
 									<a href="#" class="card__image">
-										<img src="images/2.jpg" alt="1">
+										<img src="images/product/2.jpg" alt="1">
 									</a>
 								</div>
 								<!-- Нижняя часть -->
@@ -238,7 +239,7 @@ require_once("lib/db.php");
 								<div class="card__top">
 									<!-- Изображение-ссылка товара -->
 									<a href="#" class="card__image">
-										<img src="images/3.jpg" alt="1">
+										<img src="images/product/3.jpg" alt="1">
 									</a>
 								</div>
 								<!-- Нижняя часть -->
@@ -262,7 +263,7 @@ require_once("lib/db.php");
 								<div class="card__top">
 									<!-- Изображение-ссылка товара -->
 									<a href="#" class="card__image">
-										<img src="images/4.jpg" alt="1">
+										<img src="images/product/4.jpg" alt="1">
 									</a>
 								</div>
 								<!-- Нижняя часть -->
@@ -286,7 +287,7 @@ require_once("lib/db.php");
 								<div class="card__top">
 									<!-- Изображение-ссылка товара -->
 									<a href="#" class="card__image">
-										<img src="images/1.jpg" alt="1">
+										<img src="images/product/1.jpg" alt="1">
 									</a>
 								</div>
 								<!-- Нижняя часть -->
@@ -315,7 +316,7 @@ require_once("lib/db.php");
 							<h2>Корзина</h2>
 							<?php
 								echo "<pre>";
-								print_r(searchProd($link, $_SESSION['id']));
+								print_r(searchProd($link));
 								echo "</pre>";
 							?>
 						</div>
