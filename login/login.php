@@ -1,6 +1,7 @@
 <?php 
-
+session_name("user");
 session_start();
+
 require_once('../config.php');
 require_once('../lib/db.php');
 
@@ -22,7 +23,7 @@ isset($_POST['password']) && !empty($_POST['password'])){
 	$result = selectOneData($link, $data, 'users');
 
 	if(is_null($result)){
-			header("location: ".BASE_URL."index.php?status=".json_encode($status["error_data"]));
+			header("location: ".BASE_URL."page.php?status=".json_encode($status["error_data"]));
 			die();
 		}
 		else{
@@ -34,4 +35,4 @@ isset($_POST['password']) && !empty($_POST['password'])){
 
 	}
 
-	header("location: ".BASE_URL."index.php?status=".json_encode($status["error"]));
+	header("location: ".BASE_URL."page.php?status=".json_encode($status["error"]));

@@ -13,7 +13,7 @@ header{
 	color: var(--c-green5);
 	text-align: center;
 }
-.close{
+.item_button p .close{
 	position: relative;
 	top: 2px;
 	display: inline-block;
@@ -21,25 +21,29 @@ header{
 	width: 30px;
 	height: 30px;
 	font-size: 20px;
-	line-height: 1.5;
 	color: #fff;
 	background: #c00;
-/*	padding:10px;*/
 	border-radius: 50%;
+	text-align: center;
 }
-.close:hover{
+.item_button p .close:hover{
 	background: #400;
 }
 span{
 	font-weight: bold;
 }
-p{
-	margin-top: -15px;
-	position: relative;
-	top: 50%;
-}
 .card {
 	margin-top: 20px;
+}
+.card__title{
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+.card__add{
+	width: 100%;
+	background: #ccc;
+	border: none;
+	border-top: 2px solid #000;
 }
 .card a{
 	text-decoration: none;
@@ -47,10 +51,12 @@ p{
 	font-weight: bold;
 }
 img{
-	width: 100%;
+	display: block;
+	width: 90%;
 	height: auto;
+	margin: 10px auto;
 }
-main{
+.index main{
 	display: flex;
 }
 .shop{
@@ -78,14 +84,13 @@ main{
     --bs-btn-disabled-bg: var(--c-green2);
     --bs-btn-disabled-border-color: var(--c-green2);
 }
-form{
+.form_reg {
 	margin: 0px auto;
 	padding: 30px;
 	border-radius: 0 0 20px 20px;
 	max-width: 400px;
 	text-align: center;
 	background: var(--c-green1);
-	animation: 1s form forwards;
 }
 .form_item{
 	display: flex;
@@ -104,16 +109,17 @@ form{
 .form_item input{
 	border-radius: 0px 20px 20px 0px;
 }
-
-@keyframes form{
-	0%{
-		padding-top: 30px;
-	}
-	70%{
-		padding-top: 90px;
-	}
-	100%{
-		padding-top: 70px;
-	}
-
+.item_button{
+	text-align: right;
+	position: relative;
+	top: 50%;
+	margin-top: -20px;
+	height: 40px;
 }
+.item_button button{
+	
+	/*margin-top: -26px;*/
+/*	height: 40px;*/
+	padding: 6px 12px;
+}
+
